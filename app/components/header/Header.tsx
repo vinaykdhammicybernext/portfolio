@@ -1,3 +1,4 @@
+import "./header.css";
 import NavLink from "../NavLink";
 
 const links = [
@@ -26,7 +27,7 @@ const Header = () => {
           <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
             {links.map((link, i) => (
               <li key={i}>
-                <NavLink href={link.to} className="main-nav__link">
+                <NavLink href={link.to} className="main-nav__link link">
                   {link.title}
                 </NavLink>
               </li>

@@ -2,11 +2,14 @@ import "./app.css";
 import Link from "next/link";
 import Image from "next/image";
 import ProjectsList from "@/components/projects/ProjectsList";
+import { getProjects } from "./services/projects";
 
 export default function Home() {
+  const allProjects = getProjects();
+
   return (
-    <>
-      <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:pb-40 pb-16 pt-16 gap-x-12">
+    <div className="flex flex-col items-center lg:py-8 py-4 2xl:px-40 px-32">
+      <section className="container grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:pb-40 pb-16 pt-16 gap-x-12 ">
         <div className="2xl:w-4/5 w-full lg:mb-0 mb-8">
           <h2 className="text-5xl font-bold tracking-tight xl:text-6xl lg:text-left text-center text-balance mb-6">
             Crafting beautiful digital experiences and spaces.
@@ -41,8 +44,9 @@ export default function Home() {
             loading="eager"
           />
         </div>
-      </div>
-      <div>
+      </section>
+
+      <section className="container">
         <div className="mb-12 flex justify-between items-center">
           <div className="">
             <h3 className="font-bold text-3xl">Featured Projects</h3>
@@ -55,8 +59,9 @@ export default function Home() {
             All Projects &rarr;
           </Link>
         </div>
-        <ProjectsList />
-      </div>
-    </>
+
+        <ProjectsList projects={allProjects} />
+      </section>
+    </div>
   );
 }

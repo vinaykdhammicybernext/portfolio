@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geist.className} antialiased`}>
         <Header />
-        <main className="lg:py-8 py-4 2xl:px-40 px-32">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
