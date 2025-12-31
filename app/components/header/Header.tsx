@@ -1,5 +1,6 @@
 import "./header.css";
 import NavLink from "../NavLink";
+import Link from "next/link";
 
 const links = [
   {
@@ -20,9 +21,11 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <h1 className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
-          Portfolio
-        </h1>
+        <Link href="/">
+          <h1 className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
+            Portfolio
+          </h1>
+        </Link>
         <nav>
           <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
             {links.map((link, i) => (

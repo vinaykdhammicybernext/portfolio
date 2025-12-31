@@ -60,7 +60,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <ProjectsList projects={allProjects} />
+        <ProjectsList projects={allProjects} limit={3} />
       </section>
     </div>
   );
