@@ -8,10 +8,10 @@ export default function Home() {
   const allProjects = getProjects();
 
   return (
-    <div className="flex flex-col items-center lg:py-8 py-4 2xl:px-40 px-32">
-      <section className="container grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:pb-40 pb-16 pt-16 gap-x-12 ">
-        <div className="2xl:w-4/5 w-full lg:mb-0 mb-8">
-          <h2 className="text-5xl font-bold tracking-tight xl:text-6xl lg:text-left text-center text-balance mb-6">
+    <div className="flex flex-col items-center lg:py-16 py-8 2xl:px-40 md:px-32 px-12">
+      <section className="container grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:pb-40 pb-16 gap-x-12 ">
+        <div className="w-full lg:mb-0 mb-8">
+          <h2 className="md:text-5xl text-4xl font-bold tracking-tight xl:text-6xl lg:text-left text-center text-balance mb-6">
             Crafting beautiful digital experiences and spaces.
           </h2>
           <p className="md:text-xl text-md text-muted-foreground leading-relaxed text-pretty mb-6 lg:text-left text-center">

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="border-t bg-muted/30 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-muted-foreground max-sm:text-center">
             © {new Date().getFullYear()} Portfolio. Built with Next.js &
             Tailwind CSS.
           </div>

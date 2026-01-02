@@ -21,15 +21,15 @@ const ProjectDetail = async ({ params }: Props) => {
   }
 
   return (
-    <div className="flex flex-col gap-32">
+    <div className="flex flex-col lg:gap-32 gap-12 2xl:px-40 md:px-32 sm:px-16 px-8 lg:pt-32 md:pt-16 pt-8">
       <section className="flex flex-col items-center">
-        <div className="container pt-36">
+        <div className="container ">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-4">
-              <div className="mb-8">
+              <div className="md:mb-8 mb-0">
                 <Link
                   href="/projects"
-                  className="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-9 px-4 py-2 has-[>svg]:px-3 hidden sm:inline-flex"
+                  className="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-9 px-0 py-2 has-[>svg]:px-3 sm:inline-flex"
                 >
                   &larr; Back to all projects
                 </Link>
@@ -39,8 +39,10 @@ const ProjectDetail = async ({ params }: Props) => {
                   <p className="text-xs font-medium uppercase tracking-wider text-primary">
                     {project.category}
                   </p>
-                  <h2 className="text-5xl font-bold mb-6">{project.title}</h2>
-                  <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
+                  <h2 className="xl:text-5xl text-4xl font-bold lg:mb-6 mb-3">
+                    {project.title}
+                  </h2>
+                  <p className="lg:text-xl text-lg text-muted-foreground leading-relaxed text-pretty">
                     {project.description}
                   </p>
                 </div>
@@ -63,7 +65,7 @@ const ProjectDetail = async ({ params }: Props) => {
               </div>
               <div className="border-t pt-4 flex flex-col gap-4">
                 <h4 className="text-2xl font-bold">Project Overview</h4>
-                <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
+                <p className="lg:text-xl text-lg text-muted-foreground leading-relaxed text-pretty">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Nulla excepturi id, obcaecati voluptates quidem eveniet dolore
                   aut incidunt eius dolor, inventore aspernatur? Nulla iure
@@ -92,7 +94,7 @@ const ProjectDetail = async ({ params }: Props) => {
       </section>
       <hr />
       <section className="flex flex-col items-center">
-        <div className="container pb-16">
+        <div className="container lg:pb-16 pb-12">
           <h4 className="text-2xl font-bold mb-8">Other Projects</h4>
           <ProjectsList projects={otherProjects} />
         </div>

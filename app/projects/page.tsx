@@ -5,7 +5,7 @@ const Projects = () => {
   const allProjects = getProjects();
   return (
     <section className="flex flex-col items-center">
-      <div className="container lg:py-16 py-4 pt-16">
+      <div className="container py-16 2xl:px-32 px-8">
         <ProjectsList projects={allProjects} />
       </div>
     </section>
