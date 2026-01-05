@@ -22,9 +22,7 @@ const ProjectListItem = ({ project }) => {
         <h3 className="text-xl font-semibold leading-none group-hover:underline">
           {project.title}
         </h3>
-        <p className="text-sm text-muted-foreground line-clamp-2">
-          {project.description}
-        </p>
+        <p className="project_card__desc">{project.description}</p>
       </div>
     </Link>
   );

@@ -8,13 +8,13 @@ export default function Home() {
   const allProjects = getProjects();
 
   return (
-    <div className="flex flex-col items-center lg:py-16 py-8 2xl:px-40 md:px-32 px-12">
+    <div className="flex-column lg:py-16 py-8 2xl:px-40 md:px-32 px-12">
       <section className="container grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:pb-40 pb-16 gap-x-12 ">
         <div className="w-full lg:mb-0 mb-8">
-          <h2 className="md:text-5xl text-4xl font-bold tracking-tight xl:text-6xl lg:text-left text-center text-balance mb-6">
+          <h2 className="heading-secondary">
             Crafting beautiful digital experiences and spaces.
           </h2>
-          <p className="md:text-xl text-md text-muted-foreground leading-relaxed text-pretty mb-6 lg:text-left text-center">
+          <p className="description">
             I'm a multi-disciplinary designer focused on building clean,
             functional, and aesthetically pleasing solutions for the modern
             world.
@@ -47,10 +47,14 @@ export default function Home() {
       </section>
 
       <section className="container">
-        <div className="mb-12 flex justify-between items-center">
+        <div className="md:mb-12 mb-6 flex justify-between items-center">
           <div className="">
-            <h3 className="font-bold text-3xl">Featured Projects</h3>
-            <p>A selection of my recent work across different disciplines.</p>
+            <h3 className="font-bold text-3xl sm:text-left text-center">
+              Featured Projects
+            </h3>
+            <p className="description sm:text-left text-center">
+              A selection of my recent work across different disciplines.
+            </p>
           </div>
           <Link
             href="/projects"

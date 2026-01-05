@@ -4,7 +4,7 @@ import { getProjects } from "@/services/projects";
 const Projects = () => {
   const allProjects = getProjects();
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex-column">
       <div className="container py-16 2xl:px-32 px-8">
         <ProjectsList projects={allProjects} />
       </div>

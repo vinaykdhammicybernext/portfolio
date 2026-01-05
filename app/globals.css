@@ -124,3 +124,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+@layer components {
+  .heading-primary {
+    @apply text-xl font-bold tracking-tight hover:opacity-80 transition-opacity;
+  }
+
+  .heading-secondary {
+    @apply md:text-5xl text-4xl font-bold tracking-tight xl:text-6xl lg:text-left text-center text-balance mb-6;
+  }
+
+  .description {
+    @apply md:text-xl text-base text-muted-foreground leading-relaxed text-pretty mb-6 lg:text-left text-center;
+  }
+
+  .project-card__heading {
+    @apply xl:text-5xl md:text-4xl text-2xl font-bold lg:mb-6 mb-0;
+  }
+
+  .project_card__desc {
+    @apply text-sm text-muted-foreground line-clamp-2;
+  }
+
+  .project-overview__description {
+    @apply lg:text-xl text-base text-muted-foreground leading-relaxed text-pretty;
+  }
+
+  .flex-column {
+    @apply flex flex-col items-center;
+  }
+}

@@ -26,9 +26,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
-          <h1 className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
-            Portfolio
-          </h1>
+          <h1 className="heading-primary">Portfolio</h1>
         </Link>
         <nav>
           <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -47,24 +45,13 @@ const Header = () => {
         <button
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="Toggle menu"
-          className="md:hidden relative z-50 h-6 w-7"
+          className="md:hidden relative z-50 h-4 w-6"
         >
-          <span
-            className={`absolute left-0 top-0 h-0.5 w-full bg-black transition ${
-              isOpen ? "rotate-45 top-3" : ""
-            }`}
-          />
-          <span
-            className={`absolute left-0 top-3 h-0.5 w-full bg-black transition ${
-              isOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`absolute left-0 top-6 h-0.5 w-full bg-black transition ${
-              isOpen ? "-rotate-45 top-3" : ""
-            }`}
-          />
+          <span className="absolute left-0 top-0 h-0.5 w-full bg-black transition " />
+          <span className="absolute left-0 top-3 h-0.5 w-full bg-black transition" />
+          <span className="absolute left-0 top-6 h-0.5 w-full bg-black transition" />
         </button>
+
         {isOpen && (
           <div
             className="fixed inset-0 z-40 h-screen w-full bg-black/50 backdrop-blur-sm peer-checked:block"
@@ -73,12 +60,13 @@ const Header = () => {
             &nbsp;
           </div>
         )}
+
         <div
-          className={`fixed top-0 right-0 z-50 h-screen w-[85%] bg-white px-6 pt-4 shadow-2xl transform transition-transform duration-300 md:hidden ${
-            isOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 right-0 z-50 h-screen w-[85%] bg-white px-6 pt-4 shadow-2xl transform transition-all duration-300 ease-in-out md:hidden ${
+            isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           }`}
         >
-          <nav>
+          <nav className="w-full">
             <div className="flex justify-end">
               <button className="text-2xl" onClick={() => setIsOpen(false)}>
                 X
