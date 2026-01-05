@@ -32,7 +32,7 @@ const Header = () => {
           <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
             {links.map((link, i) => (
               <li key={i}>
-                <NavLink href={link.to} className="main-nav__link link">
+                <NavLink href={link.to} className="  link">
                   {link.title}
                 </NavLink>
               </li>
@@ -73,15 +73,15 @@ const Header = () => {
               </button>
             </div>
             <ul className="flex flex-col gap-6 text-lg">
-              {links.map((link) => (
-                <li key={link.to}>
-                  <Link
+              {links.map((link, i) => (
+                <li key={i}>
+                  <NavLink
                     href={link.to}
+                    className="link block"
                     onClick={() => setIsOpen(false)}
-                    className="block"
                   >
                     {link.title}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
